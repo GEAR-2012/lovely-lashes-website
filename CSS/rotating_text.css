@@ -1,0 +1,31 @@
+nav a {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr;
+}
+
+nav a .rotating_text.brand {
+  width: 150px;
+  height: 150px;
+  padding: 0;
+  text-shadow: 0 0 5px rgb(0, 0, 0);
+  font-size: 16px;
+  font-weight: bold;
+  color: rgb(228, 228, 183);
+  grid-area: 1 / 1 / 2 / 2;
+  justify-self: center;
+  align-self: center;
+}
+
+nav a .brand {
+  width: 150px;
+  height: 150px;
+  grid-area: 1 / 1 / 2 / 2;
+  justify-self: center;
+  align-self: center;
+  display: flex;
+}
+
+nav a .brand .ll-logo {
+  margin: auto;
+}

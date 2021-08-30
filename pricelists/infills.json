@@ -1,0 +1,107 @@
+{
+  "tr1": {
+    "name": "1D Classic Silk or Mink Lashes",
+    "priceVariant1": {
+      "name": "2 weeks",
+      "price": 26
+    },
+    "priceVariant2": {
+      "name": "3 weeks",
+      "price": 36
+    },
+    "priceVariant3": {
+      "name": "(4 weeks)",
+      "price": null
+    }
+  },
+  "tr2": {
+    "name": "1D Classic Cashmere Lashes",
+    "priceVariant1": {
+      "name": "2 weeks",
+      "price": 28
+    },
+    "priceVariant2": {
+      "name": "3 weeks",
+      "price": 34
+    },
+    "priceVariant3": {
+      "name": "(4 weeks)",
+      "price": 40
+    }
+  },
+  "tr3": {
+    "name": "Hybrid Lashes (1-3D Mix)",
+    "priceVariant1": {
+      "name": "2 weeks",
+      "price": 29
+    },
+    "priceVariant2": {
+      "name": "3 weeks",
+      "price": 35
+    },
+    "priceVariant3": {
+      "name": "(4 weeks)",
+      "price": 41
+    }
+  },
+  "tr4": {
+    "name": "2-3D Volume Lashes",
+    "priceVariant1": {
+      "name": "2 weeks",
+      "price": 30
+    },
+    "priceVariant2": {
+      "name": "3 weeks",
+      "price": 36
+    },
+    "priceVariant3": {
+      "name": "(4 weeks)",
+      "price": 42
+    }
+  },
+  "tr5": {
+    "name": "3-4D Volume Lashes \"Russian\"",
+    "priceVariant1": {
+      "name": "2 weeks",
+      "price": 32
+    },
+    "priceVariant2": {
+      "name": "3 weeks",
+      "price": 38
+    },
+    "priceVariant3": {
+      "name": "(4 weeks)",
+      "price": 44
+    }
+  },
+  "tr6": {
+    "name": "4-6D Mega Volume Lashes",
+    "priceVariant1": {
+      "name": "2 weeks",
+      "price": 36
+    },
+    "priceVariant2": {
+      "name": "3 weeks",
+      "price": 42
+    },
+    "priceVariant3": {
+      "name": "(4 weeks)",
+      "price": 48
+    }
+  },
+  "tr7": {
+    "name": "Whispy Volume Lashes (3-6D)",
+    "priceVariant1": {
+      "name": "2 weeks",
+      "price": 32
+    },
+    "priceVariant2": {
+      "name": "3 weeks",
+      "price": 38
+    },
+    "priceVariant3": {
+      "name": "(4 weeks)",
+      "price": 44
+    }
+  }
+}

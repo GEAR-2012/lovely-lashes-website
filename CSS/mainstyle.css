@@ -1,0 +1,650 @@
+* {
+    margin: 0;
+    padding: 0;
+    --color_border: #201905;
+    --color_shadow: rgba(0, 0, 0, 0.5);
+    --color_light: rgba(255, 255, 255, 0.7);
+    --color_dark: #2e2817;
+    --color_gold: #ae9453;
+    --color_xxdark: #180f03;
+}
+
+/*
+Used Font Families
+
+font-family: 'Great Vibes', cursive;
+font-family: 'Philosopher', sans-serif;
+font-family: 'Advent Pro', sans-serif;
+font-family: 'Baskervville', serif;
+*/
+
+html {
+    scroll-behavior: smooth;
+    background-color: var(--color_gold);
+    color: var(--color_xxdark);
+    user-select: none;
+}
+
+hr {
+    border: none;
+    border-top: 3px solid var(--color_light);
+}
+
+header {
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    text-align: center;
+    z-index: 2;
+}
+
+nav {
+    background-color: var(--color_dark);
+    color: var(--color_gold);
+    height: 50px;
+    padding: 0 10%;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* ******************************* BRAND LOGO ******************************* */
+@keyframes bouncing {
+    10% {
+        transform: translateY(13px);
+    }
+
+    17% {
+        transform: translateY(0px);
+    }
+
+    20% {
+        transform: translateY(20px);
+    }
+
+    22% {
+        transform: translateY(0px);
+    }
+
+    27% {
+        transform: translateY(13px);
+    }
+
+    29% {
+        transform: translateY(0px);
+    }
+
+    35% {
+        transform: translateY(9px);
+    }
+
+    39% {
+        transform: translateY(0px);
+    }
+
+    47% {
+        transform: translateY(6px);
+    }
+
+    52% {
+        transform: translateY(0px);
+    }
+
+    63% {
+        transform: translateY(4px);
+    }
+
+    69% {
+        transform: translateY(0px);
+    }
+
+    83% {
+        transform: translateY(3px);
+    }
+
+    100% {
+        transform: translateY(0px);
+    }
+}
+
+nav .brand {
+    padding: 24px;
+    transform: translateY(22px);
+}
+
+nav .brand .ll-logo {
+    fill-rule: evenodd;
+    width: 90px;
+}
+
+nav .brand:hover .ll-logo {
+    animation-duration: 3s;
+    animation-name: bouncing;
+}
+
+nav .brand .ll {
+    fill: var(--color_gold);
+    transform-origin: center;
+    transform: scale(0.9);
+}
+
+nav .brand .inner-circle {
+    fill: none;
+    stroke: var(--color_gold);
+    stroke-width: 3px;
+    transform-origin: center;
+    transform: scale(0.92);
+}
+
+nav .brand .middle-circle {
+    fill: none;
+    stroke: var(--color_gold);
+    stroke-width: 5px;
+    transform-origin: center;
+    transform: scale(0.94);
+}
+
+nav .brand .outer-circle {
+    fill: var(--color_dark);
+}
+
+/* ******************************* END OF BRAND LOGO ******************************* */
+nav ul {
+    min-width: 700px;
+    display: flex;
+    justify-content: space-between;
+}
+
+nav ul li {
+    list-style: none;
+}
+
+nav ul li a {
+    font-family: "Philosopher", sans-serif;
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: var(--color_gold);
+}
+
+.site-title {
+    height: 130px;
+    padding: 4px 0 8px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.main-motif {
+    stroke-linejoin: round;
+    stroke-width: 1.2px;
+    stroke: var(--color_xxdark);
+    fill: var(--color_xxdark);
+    width: 80px;
+}
+
+.business-name {
+    font-family: "Great Vibes", cursive;
+    font-weight: 400;
+    font-size: 2.8em;
+    letter-spacing: 0.5px;
+}
+
+.infoline {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: "Advent Pro", sans-serif;
+}
+
+.infoline i {
+    margin-right: 16px;
+    font-size: 1.4em;
+}
+
+.infoline p {
+    font-size: 1.2em;
+    line-height: 1.4em;
+    letter-spacing: 2px;
+}
+
+.infoline p:first-of-type {
+    padding-right: 50px;
+}
+
+/* ************************ MAIN CONTENT ************************ */
+.main-wrapper {
+    width: 90%;
+    /* min-width: 1000px; */
+    margin: 0 auto;
+    margin-top: 50px;
+}
+
+.main-wrapper section {
+    margin-bottom: 20px;
+    padding: 30px;
+    box-sizing: border-box;
+}
+
+.main-wrapper a[id] {
+    position: relative;
+    top: -85px;
+}
+
+.main-wrapper section p {
+}
+
+.section-title {
+    font-size: 4rem;
+    font-family: "Philosopher", sans-serif;
+    margin: 1rem 0 2rem;
+}
+
+/* ******************************* HOME ******************************* */
+.home {
+    background-image: url("../images/lash-bg-03.jpg");
+    background-color: var(--color_xxdark);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: calc(100vh - (50px + 142px + 20px + 42px));
+    /*depend on: nav bar height, side title height + padding, main content section bottom margin, footer height */
+    min-height: 500px;
+    border-radius: 40px;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.home.darken-pseudo {
+    position: relative;
+}
+
+/* to darken the main picture */
+.home.darken-pseudo::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    display: block;
+    background-color: rgba(0, 0, 0, 0.2);
+    border-radius: 40px;
+}
+
+.home h2 {
+    color: var(--color_light);
+    text-transform: uppercase;
+    z-index: 1;
+    font-family: "Philosopher", sans-serif;
+    font-size: 7em;
+    text-align: center;
+    text-shadow: 0 0 12px var(--color_shadow);
+    margin: auto 60px;
+}
+
+/* ******************************* PORTFOLIO ******************************* */
+.portfolio {
+}
+
+.portfolio .gallery {
+    margin: 20px 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    grid-gap: 20px;
+}
+
+.portfolio .gallery div {
+    width: 100%;
+    /* square trick */
+    padding-bottom: 100%;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+    transition: all 0.4s ease;
+}
+
+.portfolio .gallery div:active {
+    transform: scale(3);
+    box-shadow: 0 0 600px 600px var(--color_shadow);
+    z-index: 1;
+}
+
+/* +++++++++++++++++++++++++++++++++++++++++++ */
+.portfolio .testimonials h4 {
+    font-family: "Philosopher", sans-serif;
+    font-size: 2em;
+    font-weight: normal;
+}
+
+.portfolio .testimonials p {
+    font-family: "Advent Pro", sans-serif;
+    font-size: 2em;
+    font-style: italic;
+    letter-spacing: 2px;
+    text-align: right;
+}
+
+.portfolio .testimonials hr {
+    width: 50%;
+    border: none;
+    border-top: 10px dotted var(--color_xxdark);
+    margin: 50px auto 30px;
+}
+
+/* ******************************* TREATMENTS ******************************* */
+.descriptions {
+    margin-bottom: 50px;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-row-gap: 60px;
+}
+
+.descriptions .treatment {
+    text-align: right;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-column-gap: 40px;
+}
+
+.descriptions .treatment.picture-left {
+    text-align: left;
+    grid-template-columns: 1fr 2fr;
+}
+
+.descriptions .treatment img {
+    width: 100%;
+}
+
+.text {
+    display: grid;
+    grid-template-rows: auto 1fr;
+    grid-row-gap: 18px;
+}
+
+.text h2 {
+    font-family: "Philosopher", sans-serif;
+    font-size: 3rem;
+    line-height: 3.6rem;
+}
+
+.text h3 {
+    font-family: "Advent Pro", sans-serif;
+    font-size: 2.2rem;
+    line-height: 3rem;
+    font-weight: 100;
+}
+
+/* =================================== */
+.warnings {
+    width: 90%;
+    margin: 0 auto;
+    padding: 16px 50px 0;
+    border: 2px solid var(--color_border);
+    border-radius: 40px;
+    background-color: var(--color_light);
+}
+
+.warnings span {
+    font-size: 2em;
+    margin-right: 20px;
+}
+
+.warnings h3 {
+    font-family: "Philosopher", sans-serif;
+    font-size: 3em;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.warnings p {
+    font-family: "Advent Pro", sans-serif;
+    font-size: 1.6em;
+    text-transform: uppercase;
+}
+
+.warnings h4 {
+    font-family: "Great Vibes", cursive;
+    font-size: 6em;
+    font-weight: 400;
+    text-align: right;
+}
+
+/* ******************************* PRICE ******************************* */
+/* main container for pricelists */
+.price .pricelists {
+    position: relative;
+}
+
+.price .pricelists .btn {
+    position: absolute;
+    right: 160px;
+    font-size: 3rem;
+    text-decoration: none;
+    padding: 6px 30px;
+    border-radius: 10px;
+    border: 1px solid var(--color_border);
+    transition: all 0.1s;
+}
+
+.price .pricelists .btn:hover {
+    transform: translateY(-2px);
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    background-color: rgba(255, 255, 255, 0.1);
+    box-shadow: 0 6px 8px 3px var(--color_shadow);
+}
+
+.price .pricelists .btn:active {
+    transform: translateY(0px);
+    background-color: rgba(0, 0, 0, 0.02);
+    box-shadow: 0 3px 4px 3px rgba(0, 0, 0, 0.45) inset;
+}
+
+.price .pricelists .btn:first-child {
+    top: 0;
+}
+
+.price .pricelists .btn:last-child {
+    bottom: 0;
+}
+
+/* list title */
+.price .container-a h2,
+.price .container-b h2 {
+    font-family: "Philosopher", sans-serif;
+    font-size: 3.6rem;
+    line-height: 4.6rem;
+    grid-column: 1/3;
+    padding-left: 20px;
+}
+
+/* list title */
+.price .container-a h2 {
+    /* depend on container row-gap */
+    margin-bottom: calc(30px - 8px);
+}
+
+/* list title */
+.price .container-b h2 {
+    /* depend on container row-gap */
+    margin-bottom: calc(30px - 22px);
+}
+
+/* treatment names */
+.price .container-a p,
+.price .container-b p {
+    font-family: "Advent Pro", sans-serif;
+    font-size: 2.4em;
+}
+
+/* prices */
+.price .container-a h4,
+.price .container-b h4 {
+    font-family: "Philosopher", sans-serif;
+    font-size: 2.4em;
+    text-align: right;
+}
+
+/* pricevariant names */
+.price .container-a h3,
+.price .container-b h3 {
+    font-family: "Advent Pro", sans-serif;
+    font-size: 2em;
+    font-weight: normal;
+}
+
+.price .container-a,
+.price .container-b {
+    width: 50%;
+    margin: 30px auto 0;
+    padding: 26px 50px 36px;
+    border: 2px solid var(--color_border);
+    border-radius: 40px;
+    background-color: var(--color_light);
+    display: grid;
+    grid-template-columns: 1fr auto;
+    grid-column-gap: 18px;
+}
+
+.price .container-a {
+    min-width: 600px;
+    grid-row-gap: 8px;
+}
+
+.price .container-b {
+    min-width: 600px;
+    grid-row-gap: 22px;
+}
+
+.price .sub-container {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    grid-column-gap: 22px;
+    grid-row-gap: 10px;
+}
+
+/* ******************************* ABOUT ******************************* */
+/* titles */
+.about h1 {
+    /* font-family: 'Advent Pro', sans-serif; */
+    font-family: "Philosopher", sans-serif;
+    font-size: 4rem;
+    line-height: 5rem;
+    margin-bottom: 30px;
+}
+
+/* motto */
+.about h3 {
+    font-family: "Great Vibes", cursive;
+    font-weight: 400;
+    font-size: 4rem;
+    line-height: 6rem;
+    text-align: right;
+    margin-bottom: 30px;
+}
+
+/* main text */
+.about p {
+    font-family: "Baskervville", serif;
+    font-style: italic;
+    font-size: 2rem;
+    font-weight: 400;
+    line-height: 2.7rem;
+    letter-spacing: -0.6px;
+    text-align: justify;
+}
+
+.about .self-introduction {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    grid-gap: 1rem;
+}
+
+.about .self-introduction .sign {
+    font-family: "Great Vibes", cursive;
+    font-weight: 400;
+    font-size: 3.3rem;
+    line-height: 4rem;
+    text-align: left;
+    margin: 0;
+}
+
+.about .self-introduction .picture-container {
+    display: grid;
+    grid-template-rows: auto auto;
+    grid-gap: 50px;
+    justify-items: center;
+    align-content: start;
+}
+
+.about .self-introduction .picture {
+    width: 70%;
+    border: 1px solid var(--color_border);
+    border-radius: 2rem;
+    box-shadow: 0 0 20px var(--color_shadow);
+}
+
+/* *************************** CONTACT *************************** */
+
+.contact {
+}
+
+.contact a {
+    text-decoration: none;
+    color: var(--color_xxdark);
+}
+
+.contact__cont {
+    margin: 2rem 0;
+    display: grid;
+    grid-template-columns: auto auto;
+    justify-content: start;
+    align-items: center;
+    grid-column-gap: 3rem;
+    grid-row-gap: 0.8rem;
+}
+
+.contact__cont--title {
+    font-size: 2.6rem;
+    justify-self: center;
+}
+
+.contact__cont--info {
+    font-size: 2.2rem;
+    font-family: "Philosopher", sans-serif;
+}
+/* *************************** FOOTER *************************** */
+footer {
+    width: 100%;
+    padding: 5px 0;
+    position: fixed;
+    bottom: 0;
+    background-color: var(--color_dark);
+    color: var(--color_gold);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 2;
+}
+
+footer i {
+    font-size: 1.4rem;
+    margin-right: 16px;
+}
+
+footer h3 {
+    font-family: "Philosopher", sans-serif;
+    letter-spacing: 1.4px;
+    line-height: 1.6rem;
+    margin-right: 16px;
+}
+
+footer p {
+    font-family: "Advent Pro", sans-serif;
+    letter-spacing: 1.2px;
+    line-height: 2rem;
+}
