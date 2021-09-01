@@ -299,7 +299,7 @@ nav ul li a {
 .portfolio .gallery {
   margin: 20px 0 60px;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   grid-gap: 20px;
 }
 
@@ -650,7 +650,7 @@ footer p {
   line-height: 2rem;
 }
 
-@media screen and (max-width: 400px) {
+@media screen and (max-width: 1200px) {
   hr {
     border-width: 2px;
   }
@@ -762,7 +762,7 @@ footer p {
   /* ******************************* PORTFOLIO ******************************* */
 
   .portfolio .gallery {
-    grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
   }
 
   /* +++++++++++++++++++++++++++++++++++++++++++ */
