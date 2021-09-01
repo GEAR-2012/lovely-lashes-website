@@ -1,3 +1,7 @@
+/*
+This is NOT a mobile first CSS
+*/
+
 * {
   margin: 0;
   padding: 0;
@@ -10,8 +14,7 @@
 }
 
 /*
-Used Font Families
-
+FONT FAMILIES:
 font-family: 'Great Vibes', cursive;
 font-family: 'Philosopher', sans-serif;
 font-family: 'Advent Pro', sans-serif;
@@ -164,9 +167,11 @@ nav ul li {
 nav ul li a {
   font-family: "Philosopher", sans-serif;
   font-size: 1.2rem;
+  padding: 0.5rem 1rem;
   text-transform: uppercase;
   text-decoration: none;
   color: var(--color_gold);
+  white-space: pre;
 }
 
 .site-title {
@@ -224,7 +229,7 @@ nav ul li a {
 }
 
 .main-wrapper section {
-  margin-bottom: 20px;
+  margin-bottom: 30px;
   padding: 30px;
   box-sizing: border-box;
 }
@@ -234,18 +239,21 @@ nav ul li a {
   top: -85px;
 }
 
-.main-wrapper section p {
-}
-
 .section-title {
   font-size: 4rem;
   font-family: "Philosopher", sans-serif;
   margin: 1rem 0 2rem;
 }
 
+.article-title {
+  font-size: 3rem;
+  font-family: "Philosopher", sans-serif;
+  margin: 1rem 0 2rem;
+}
+
 /* ******************************* HOME ******************************* */
 .home {
-  background-image: url("../images/lash-bg-03.jpg");
+  background-image: url("../images/front page/lash-bg-03.jpg");
   background-color: var(--color_xxdark);
   background-size: cover;
   background-position: center;
@@ -287,11 +295,9 @@ nav ul li a {
 }
 
 /* ******************************* PORTFOLIO ******************************* */
-.portfolio {
-}
 
 .portfolio .gallery {
-  margin: 20px 0;
+  margin: 20px 0 60px;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
   grid-gap: 20px;
@@ -332,7 +338,7 @@ nav ul li a {
 .portfolio .testimonials hr {
   width: 50%;
   border: none;
-  border-top: 10px dotted var(--color_xxdark);
+  border-top: 10px dotted var(--color_light);
   margin: 50px auto 30px;
 }
 
@@ -544,7 +550,6 @@ nav ul li a {
   font-size: 4rem;
   line-height: 6rem;
   text-align: right;
-  margin-bottom: 30px;
 }
 
 /* main text */
@@ -575,8 +580,7 @@ nav ul li a {
 
 .about .self-introduction .picture-container {
   display: grid;
-  grid-template-rows: auto auto;
-  grid-gap: 50px;
+  grid-row-gap: 50px;
   justify-items: center;
   align-content: start;
 }
@@ -589,9 +593,6 @@ nav ul li a {
 }
 
 /* *************************** CONTACT *************************** */
-
-.contact {
-}
 
 .contact a {
   text-decoration: none;
@@ -647,4 +648,297 @@ footer p {
   font-family: "Advent Pro", sans-serif;
   letter-spacing: 1.2px;
   line-height: 2rem;
+}
+
+@media screen and (max-width: 400px) {
+  hr {
+    border-width: 2px;
+  }
+
+  nav {
+    height: 40px;
+    padding: 0;
+    align-items: start;
+  }
+
+  /* ******************************* BRAND LOGO ******************************* */
+
+  nav .brand {
+    padding: 12px;
+    transform: translateY(-43px);
+  }
+
+  nav ul {
+    min-width: initial;
+    padding: 0.3rem 1rem;
+    display: grid;
+    grid-row-gap: 0.2rem;
+    background-color: var(--color_dark);
+  }
+
+  nav ul li a {
+    font-size: 1.4rem;
+    padding: 0.5rem 0;
+  }
+
+  .site-title {
+    height: auto;
+    padding: 0;
+    display: grid;
+    grid-row-gap: 1rem;
+    justify-items: center;
+  }
+
+  .main-motif {
+    stroke-width: 0.4px;
+    width: 90px;
+  }
+
+  .business-name {
+    font-size: 2em;
+  }
+
+  .infoline {
+    display: grid;
+    grid-column-gap: 1rem;
+    grid-row-gap: 0.8rem;
+    grid-template-columns: auto auto;
+  }
+
+  .infoline i {
+    margin-right: 0;
+    font-size: 1.2em;
+  }
+
+  .infoline p {
+    font-size: 1em;
+    line-height: 1.2em;
+    letter-spacing: 0.4px;
+  }
+
+  .infoline p:first-of-type {
+    padding-right: 0;
+  }
+
+  /* ************************ MAIN CONTENT ************************ */
+  .main-wrapper {
+    width: 100%;
+  }
+
+  .main-wrapper section {
+    padding: 16px;
+  }
+
+  .section-title {
+    font-size: 2.4rem;
+    margin: 1rem 0 2rem;
+  }
+
+  .article-title {
+    font-size: 2.2rem;
+  }
+
+  /* ******************************* HOME ******************************* */
+  .home {
+    height: calc(100vw - (50px + 142px + 20px + 42px));
+    /* depend on: nav bar height, side title height + padding, main content section bottom margin, footer height */
+    min-height: 300px;
+    border-radius: 20px;
+  }
+
+  .home h2 {
+    font-size: 3em;
+    margin: auto 20px;
+  }
+
+  .home.darken-pseudo {
+    margin: 20px 20px;
+  }
+
+  .home.darken-pseudo::after {
+    border-radius: 20px;
+  }
+
+  /* ******************************* PORTFOLIO ******************************* */
+
+  .portfolio .gallery {
+    grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
+  }
+
+  /* +++++++++++++++++++++++++++++++++++++++++++ */
+  .portfolio .testimonials h4 {
+    font-size: 1.4em;
+  }
+
+  .portfolio .testimonials p {
+    font-size: 1.4em;
+    letter-spacing: 1.2px;
+  }
+
+  .portfolio .testimonials hr {
+    width: 80%;
+    border-width: 5px;
+    margin: 30px auto;
+  }
+
+  /* ******************************* SERVICES ******************************* */
+  .descriptions .services {
+    display: initial;
+    text-align: left;
+  }
+
+  .descriptions .services img {
+    display: none;
+  }
+
+  .text h2 {
+    font-size: 1.8rem;
+    line-height: 2rem;
+  }
+
+  .text h3 {
+    font-size: 1.4rem;
+    line-height: 1.8rem;
+  }
+
+  /* =================================== */
+  .warnings {
+    width: auto;
+    padding: 20px;
+  }
+
+  .warnings span {
+    font-size: 2em;
+  }
+
+  .warnings h3 {
+    font-size: 1.6em;
+    margin-bottom: 0.6rem;
+  }
+
+  .warnings p {
+    font-size: 0.8em;
+    font-weight: 500;
+  }
+
+  .warnings h4 {
+    font-size: 3em;
+  }
+
+  /* ******************************* PRICE ******************************* */
+
+  .price .pricelists .btn {
+    display: none;
+  }
+
+  /* list title */
+  .price .container-a h2,
+  .price .container-b h2 {
+    font-size: 1.4rem;
+    line-height: 1.6rem;
+  }
+
+  /* service names */
+  .price .container-a p,
+  .price .container-b p {
+    font-size: 1em;
+  }
+
+  /* prices */
+  .price .container-a h4,
+  .price .container-b h4 {
+    font-size: 1em;
+  }
+
+  /* pricevariant names */
+  .price .container-a h3,
+  .price .container-b h3 {
+    font-size: 1em;
+  }
+
+  .price .container-a,
+  .price .container-b {
+    width: auto;
+    min-width: initial;
+    margin-top: 30px;
+    padding: 20px 20px;
+    grid-column-gap: 10px;
+  }
+
+  .price .container-a {
+    grid-row-gap: 10px;
+  }
+
+  .price .container-b {
+    grid-row-gap: 10px;
+  }
+
+  .price .sub-container {
+    grid-column-gap: 10px;
+    grid-row-gap: 2px;
+  }
+
+  /* ******************************* ABOUT ******************************* */
+  /* motto */
+  .about h3 {
+    font-size: 2.8rem;
+    line-height: 3rem;
+  }
+
+  /* main text */
+  .about p {
+    font-size: 1.3rem;
+    line-height: 1.6rem;
+    letter-spacing: 0px;
+  }
+
+  .about .self-introduction {
+    display: grid;
+    grid-template-columns: initial;
+  }
+
+  .about .self-introduction .sign {
+    font-size: 2.8rem;
+    line-height: 3.2rem;
+  }
+
+  /* *************************** CONTACT *************************** */
+  .contact__cont {
+    padding-bottom: 2rem;
+    grid-column-gap: 1rem;
+    grid-row-gap: 0.6rem;
+  }
+
+  .contact__cont--title {
+    font-size: 1.8rem;
+  }
+
+  .contact__cont--info {
+    font-size: 1.2rem;
+  }
+
+  /* *************************** FOOTER *************************** */
+  footer {
+    width: 100vw;
+    display: grid;
+    grid-template-columns: auto auto;
+    justify-items: center;
+  }
+
+  footer i {
+    font-size: 1rem;
+  }
+
+  footer h3 {
+    font-size: 1rem;
+  }
+
+  footer h3:last-of-type {
+    grid-column: 1 / 3;
+  }
+
+  footer p {
+    font-size: 0.8rem;
+    grid-column: 1 / 3;
+  }
 }
