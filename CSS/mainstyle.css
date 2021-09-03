@@ -2,15 +2,20 @@
 This is NOT a mobile first CSS
 */
 
-* {
-  margin: 0;
-  padding: 0;
+:root {
   --color_border: #201905;
   --color_shadow: rgba(0, 0, 0, 0.5);
   --color_light: rgba(255, 255, 255, 0.7);
   --color_dark: #2e2817;
   --color_gold: #ae9453;
   --color_xxdark: #180f03;
+  --menu-speed: 0.75s;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 /*
@@ -175,12 +180,10 @@ nav ul li a {
 }
 
 .site-title {
-  height: 130px;
-  padding: 4px 0 8px;
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
   align-items: center;
+  margin-bottom: 1rem;
 }
 
 .main-motif {
@@ -189,6 +192,7 @@ nav ul li a {
   stroke: var(--color_xxdark);
   fill: var(--color_xxdark);
   width: 80px;
+  margin-bottom: 0.5rem;
 }
 
 .business-name {
@@ -196,6 +200,8 @@ nav ul li a {
   font-weight: 400;
   font-size: 2.8em;
   letter-spacing: 0.5px;
+  text-align: center;
+  margin-bottom: 0.5rem;
 }
 
 .infoline {
@@ -253,34 +259,34 @@ nav ul li a {
 
 /* ******************************* HOME ******************************* */
 .home {
-  background-image: url("../images/front page/lash-bg-03.jpg");
-  background-color: var(--color_xxdark);
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
+  padding-top: 1rem !important;
+}
+
+.home-picture {
+  background-color: var(--color_dark);
   height: calc(100vh - (50px + 142px + 20px + 42px));
   /*depend on: nav bar height, side title height + padding, main content section bottom margin, footer height */
   min-height: 500px;
   border-radius: 40px;
   display: flex;
   justify-content: flex-end;
-}
-
-.home.darken-pseudo {
   position: relative;
 }
 
-/* to darken the main picture */
-.home.darken-pseudo::after {
+.home-picture::before {
+  background-image: url("../images/front page/lash-bg-03.jpg");
+  background-color: var(--color_dark);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  filter: brightness(0.7);
   content: "";
   position: absolute;
   top: 0;
   left: 0;
-  bottom: 0;
-  right: 0;
-  display: block;
-  background-color: rgba(0, 0, 0, 0.2);
-  border-radius: 40px;
+  width: 100%;
+  height: 100%;
+  border-radius: inherit;
 }
 
 .home h2 {
@@ -668,26 +674,8 @@ footer p {
     transform: translateY(-43px);
   }
 
-  nav ul {
-    display: none;
-    min-width: initial;
-    padding: 0.3rem 1rem;
-    /* display: grid; */
-    grid-row-gap: 0.2rem;
-    background-color: var(--color_dark);
-  }
-
-  nav ul li a {
-    font-size: 1.4rem;
-    padding: 0.5rem 0;
-  }
-
   .site-title {
-    height: auto;
-    padding: 0;
-    display: grid;
-    grid-row-gap: 1rem;
-    justify-items: center;
+    margin-bottom: 2rem;
   }
 
   .main-motif {
@@ -723,11 +711,13 @@ footer p {
 
   /* ************************ MAIN CONTENT ************************ */
   .main-wrapper {
-    width: 100%;
+    width: 90%;
+    margin-top: 4rem;
   }
 
   .main-wrapper section {
-    padding: 16px;
+    padding-left: 0;
+    padding-right: 0;
   }
 
   .section-title {
@@ -740,30 +730,34 @@ footer p {
   }
 
   /* ******************************* HOME ******************************* */
-  .home {
+  .home-picture {
+    background-image: none;
     height: calc(100vw - (50px + 142px + 20px + 42px));
     /* depend on: nav bar height, side title height + padding, main content section bottom margin, footer height */
     min-height: 300px;
     border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    margin-top: 1rem;
+    filter: brightness(1);
+  }
+
+  .home-picture::before {
+    background-image: none;
+    filter: none;
   }
 
   .home h2 {
     font-size: 3em;
-    margin: auto 20px;
-  }
-
-  .home.darken-pseudo {
-    margin: 20px 20px;
-  }
-
-  .home.darken-pseudo::after {
-    border-radius: 20px;
+    margin: 0;
   }
 
   /* ******************************* PORTFOLIO ******************************* */
 
   .portfolio .gallery {
-    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
   }
 
   /* +++++++++++++++++++++++++++++++++++++++++++ */
