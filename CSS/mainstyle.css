@@ -54,7 +54,19 @@ nav {
   padding: 0 10%;
   box-sizing: border-box;
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+nav .brand-container-link {
+  position: fixed;
+  top: -30px;
+  left: 40px;
+  width: 150px;
+  height: 150px;
+  display: grid;
+  grid-template-areas: "main";
+  justify-items: center;
   align-items: center;
 }
 
@@ -117,28 +129,28 @@ nav {
   }
 }
 
-nav .brand {
-  padding: 24px;
-  transform: translateY(22px);
+nav .brand-container-link .brand-logo {
+  grid-area: main;
+  z-index: 1;
 }
 
-nav .brand .ll-logo {
+nav .brand-container-link .brand-logo .ll-logo {
   fill-rule: evenodd;
   width: 90px;
 }
 
-nav .brand:hover .ll-logo {
+nav .brand-container-link .brand-logo:active {
   animation-duration: 3s;
   animation-name: bouncing;
 }
 
-nav .brand .ll {
+nav .brand-container-link .brand-logo .ll {
   fill: var(--color_gold);
   transform-origin: center;
   transform: scale(0.9);
 }
 
-nav .brand .inner-circle {
+nav .brand-container-link .brand-logo .inner-circle {
   fill: none;
   stroke: var(--color_gold);
   stroke-width: 3px;
@@ -146,7 +158,7 @@ nav .brand .inner-circle {
   transform: scale(0.92);
 }
 
-nav .brand .middle-circle {
+nav .brand-container-link .brand-logo .middle-circle {
   fill: none;
   stroke: var(--color_gold);
   stroke-width: 5px;
@@ -154,7 +166,7 @@ nav .brand .middle-circle {
   transform: scale(0.94);
 }
 
-nav .brand .outer-circle {
+nav .brand-container-link .brand-logo .outer-circle {
   fill: var(--color_dark);
 }
 
@@ -242,7 +254,7 @@ nav ul li a {
 
 .main-wrapper a[id] {
   position: relative;
-  top: -85px;
+  top: -90px;
 }
 
 .section-title {
@@ -667,11 +679,16 @@ footer p {
     align-items: start;
   }
 
-  /* ******************************* BRAND LOGO ******************************* */
+  nav .brand-container-link {
+    top: -18px;
+    left: 15px;
+    width: 110px;
+    height: 110px;
+  }
 
-  nav .brand {
-    padding: 12px;
-    transform: translateY(-43px);
+  /* ******************************* BRAND LOGO ******************************* */
+  nav .brand-container-link .brand-logo .ll-logo {
+    width: 70px;
   }
 
   .site-title {
@@ -718,6 +735,11 @@ footer p {
   .main-wrapper section {
     padding-left: 0;
     padding-right: 0;
+  }
+
+  .main-wrapper a[id] {
+    position: relative;
+    top: -70px;
   }
 
   .section-title {
