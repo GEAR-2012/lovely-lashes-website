@@ -1,0 +1,52 @@
+/* MOBILE FIRST DESIGN */
+
+.gallery-with-slideshow .fullscreen-slideshow {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+.gallery-with-slideshow .fullscreen-slideshow .image {
+  width: 90%;
+  height: 90%;
+  overflow: hidden;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+}
+
+/* Left & Right arrows */
+.gallery-with-slideshow .fullscreen-slideshow i {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 1.6rem;
+  padding: 1rem;
+  color: rgb(204, 204, 204);
+  text-shadow: 0 0 1px black;
+  cursor: pointer;
+}
+
+/* Left arrow */
+.gallery-with-slideshow .fullscreen-slideshow i:first-of-type {
+  left: 0;
+}
+
+/* Right arrow */
+.gallery-with-slideshow .fullscreen-slideshow i:last-of-type {
+  right: 0;
+}
+
+@media screen and (min-width: 1200px) {
+  /* Left & Right arrows */
+  .gallery-with-slideshow .fullscreen-slideshow i {
+    font-size: 2.4rem;
+    padding: 1.8rem;
+  }
+}

@@ -34,11 +34,15 @@
     <link rel="stylesheet" href="CSS/mainstyle.css" />
     <link rel="stylesheet" href="CSS/menu.css" />
     <link rel="stylesheet" href="CSS/rotating_text.css" />
+    <link rel="stylesheet" href="CSS/gallery/gallery.css" />
+    <link rel="stylesheet" href="CSS/gallery/slideshow.css" />
 
     <!-- JavaScript -->
-    <script type="text/javascript" src="make_pricelists.js" defer></script>
-    <script type="text/javascript" src="rotating_text.js" defer></script>
-    <script type="text/javascript" src="menu.js" defer></script>
+    <script type="text/javascript" src="js/make_pricelists.js" defer></script>
+    <script type="text/javascript" src="js/rotating_text.js" defer></script>
+    <script type="text/javascript" src="js/menu.js" defer></script>
+    <script type="text/javascript" src="js/gallery/deploy-gallery.js" defer></script>
+    <script type="text/javascript" src="js/gallery/slideshow.js" defer></script>
   </head>
   <body>
     <header>
@@ -110,20 +114,26 @@
       <section class="portfolio">
         <a id="portfolio"></a>
         <h2 class="section-title">My Portfolio</h2>
-        <article class="gallery">
-          <div style="background-image: url(images/portfolio/pic_01.jpg)"></div>
-          <div style="background-image: url(images/portfolio/pic_02.jpg)"></div>
-          <div style="background-image: url(images/portfolio/pic_03.jpg)"></div>
-          <div style="background-image: url(images/portfolio/pic_04.jpg)"></div>
-          <div style="background-image: url(images/portfolio/pic_05.jpg)"></div>
-          <div style="background-image: url(images/portfolio/pic_06.jpg)"></div>
-          <div style="background-image: url(images/portfolio/pic_07.jpg)"></div>
-          <div style="background-image: url(images/portfolio/pic_08.jpg)"></div>
-          <div style="background-image: url(images/portfolio/pic_09.jpg)"></div>
-          <div style="background-image: url(images/portfolio/pic_10.jpg)"></div>
-          <div style="background-image: url(images/portfolio/pic_11.jpg)"></div>
-          <div style="background-image: url(images/portfolio/pic_12.jpg)"></div>
-        </article>
+
+        <!-- GALLERY-SLIDESHOW -->
+        <!-- This is the main container for the gallery with slideshow -->
+        <div class="gallery-with-slideshow">
+          <!-- Full Screen Slideshow Initialy hidden -->
+          <div id="fullscreen-slideshow" class="fullscreen-slideshow">
+            <i id="left-arrow" class="far fa-arrow-alt-circle-left"></i>
+            <i id="right-arrow" class="far fa-arrow-alt-circle-right"></i>
+            <div id="image" class="image">
+              <!-- provided by javascript -->
+            </div>
+          </div>
+
+          <!-- Gallery -->
+          <div id="gallery" class="gallery">
+            <!-- deployed by javascript -->
+          </div>
+        </div>
+        <!-- GALLERY-SLIDESHOW END -->
+
         <!-- ++++++++++++++++++++++++++++++++++++++++++++++++ -->
         <article class="testimonials">
           <h1 class="article-title">Testimonials</h1>

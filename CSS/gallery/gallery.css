@@ -1,0 +1,40 @@
+/* MOBILE FIRST DESIGN */
+.hide {
+  display: none !important;
+}
+
+.gallery-with-slideshow {
+  margin: 0.5rem 0;
+}
+
+.gallery-with-slideshow .gallery {
+  width: 100%;
+  background-color: transparent;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+
+.gallery-with-slideshow .gallery .img {
+  width: 140px;
+  height: 140px;
+  margin: 0.8rem;
+  border-radius: 1rem;
+  background-color: gray;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  cursor: pointer;
+}
+
+@media screen and (min-width: 1200px) {
+  .gallery-with-slideshow {
+    margin: 1.5rem 0;
+  }
+
+  .gallery-with-slideshow .gallery .img {
+    width: 220px;
+    height: 220px;
+    margin: 1.8rem;
+  }
+}

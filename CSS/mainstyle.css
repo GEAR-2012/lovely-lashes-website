@@ -314,29 +314,11 @@ nav ul li a {
 
 /* ******************************* PORTFOLIO ******************************* */
 
-.portfolio .gallery {
-  margin: 20px 0 60px;
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  grid-gap: 20px;
-}
-
-.portfolio .gallery div {
-  width: 100%;
-  /* square trick */
-  padding-bottom: 100%;
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  position: relative;
-  transition: all 0.4s ease;
-}
-
-.portfolio .gallery div:active {
-  transform: scale(3);
-  box-shadow: 0 0 600px 600px var(--color_shadow);
-  z-index: 1;
-}
+/*
+      all CSS for the gallery are in dedicated files:
+      CSS/gallery/gallery.css,
+      CSS/gallery/slideshow.css,
+*/
 
 /* +++++++++++++++++++++++++++++++++++++++++++ */
 .portfolio .testimonials h4 {
@@ -386,7 +368,6 @@ nav ul li a {
 
 .text {
   display: grid;
-  grid-template-rows: auto 1fr;
   grid-row-gap: 18px;
 }
 
@@ -777,11 +758,6 @@ footer p {
   }
 
   /* ******************************* PORTFOLIO ******************************* */
-
-  .portfolio .gallery {
-    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-  }
-
   /* +++++++++++++++++++++++++++++++++++++++++++ */
   .portfolio .testimonials h4 {
     font-size: 1.4em;
