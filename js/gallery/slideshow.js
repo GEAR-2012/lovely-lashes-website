@@ -5,7 +5,6 @@ const image = document.querySelector("#image");
 const leftArrow = document.querySelector("#left-arrow");
 const rightArrow = document.querySelector("#right-arrow");
 let imageIndex;
-const imageURLArray = [];
 
 fetch("../images/gallery/full_size_pictures/imageUrlList.json")
   .then((response) => response.json())

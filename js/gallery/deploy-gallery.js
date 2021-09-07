@@ -1,15 +1,15 @@
 // This script read image url-s from json file and fill up the gallery container based on it.
 
 const gallery = document.querySelector("#gallery");
-const thumbnailURLArray = [];
+const imageURLArray = [];
 
 // Fetch thumbnail url-s from json file and push into an array
-fetch("../images/gallery/thumbnails/thumbUrlList.json")
+fetch("../images/gallery/imageUrlList.json")
   .then((response) => response.json())
   .then((data) => {
     data.forEach((url, index) => {
       makeImageElement(url, index);
-      thumbnailURLArray.push(url);
+      imageURLArray.push(url);
     });
   });
 
