@@ -286,12 +286,12 @@ nav ul li a {
 }
 
 .home-picture::before {
-  background-image: url("../images/front page/lash-bg-03.jpg");
+  background-image: url("../images/front page/lash-bg-01.jpg");
   background-color: var(--color_dark);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  filter: brightness(0.7);
+  filter: brightness(0.8);
   content: "";
   position: absolute;
   top: 0;
