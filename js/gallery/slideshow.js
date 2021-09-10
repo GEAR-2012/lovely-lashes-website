@@ -6,14 +6,6 @@ const leftArrow = document.querySelector("#left-arrow");
 const rightArrow = document.querySelector("#right-arrow");
 let imageIndex;
 
-fetch("../images/gallery/full_size_pictures/imageUrlList.json")
-  .then((response) => response.json())
-  .then((data) => {
-    data.forEach((url) => {
-      imageURLArray.push(url);
-    });
-  });
-
 // Initially hide the slideshow until a gallery picture clicked
 slideshowBackground.classList.add("hide");
 
