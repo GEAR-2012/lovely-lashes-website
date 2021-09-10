@@ -275,7 +275,7 @@ nav ul li a {
 }
 
 .home-picture {
-  background-color: var(--color_dark);
+  /* background-color: var(--color_dark); */
   height: calc(100vh - (50px + 142px + 20px + 42px));
   /*depend on: nav bar height, side title height + padding, main content section bottom margin, footer height */
   min-height: 500px;
@@ -285,6 +285,8 @@ nav ul li a {
   position: relative;
 }
 
+/* use this for only one picture */
+/* 
 .home-picture::before {
   background-image: url("../images/front page/lash-bg-01.jpg");
   background-color: var(--color_dark);
@@ -300,15 +302,30 @@ nav ul li a {
   height: 100%;
   border-radius: inherit;
 }
+*/
+
+/* use this for pattern background */
+.home-picture::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: inherit;
+  background-image: url("../images/graphics/lash_2.png");
+  background-size: 200px;
+  background-color: #ffffff2e;
+}
 
 .home h2 {
-  color: var(--color_light);
+  color: rgba(215, 215, 215);
   text-transform: uppercase;
   z-index: 1;
   font-family: "Philosopher", sans-serif;
   font-size: 7em;
   text-align: center;
-  text-shadow: 0 0 12px var(--color_shadow);
+  text-shadow: 8px 8px 4px var(--color_shadow);
   margin: auto 60px;
 }
 
@@ -748,13 +765,15 @@ footer p {
   }
 
   .home-picture::before {
-    background-image: none;
-    filter: none;
+    /* background-image: none;
+    filter: none; */
+    background-size: 110px;
   }
 
   .home h2 {
     font-size: 3em;
     margin: 0;
+    text-shadow: 5px 5px 3px var(--color_shadow);
   }
 
   /* ******************************* PORTFOLIO ******************************* */
