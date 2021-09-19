@@ -19,12 +19,19 @@
   width: 140px;
   height: 140px;
   margin: 0.8rem;
-  border-radius: 1rem;
+  border-radius: var(--m-size);
   background-color: gray;
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
   cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.gallery-with-slideshow .gallery .img:hover {
+  transform: rotate(-3deg) scale(1.1);
+  box-shadow: 0 0 1.5rem 0.5rem var(--color_shadow);
+  filter: brightness(1.2);
 }
 
 @media screen and (min-width: 1200px) {
