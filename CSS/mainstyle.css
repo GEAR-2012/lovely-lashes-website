@@ -278,22 +278,22 @@ nav ul li a {
   /* background-color: var(--color_dark); */
   height: calc(100vh - (50px + 142px + 20px + 42px));
   /*depend on: nav bar height, side title height + padding, main content section bottom margin, footer height */
-  min-height: 500px;
+  min-height: 700px;
   border-radius: 40px;
   display: flex;
   justify-content: flex-end;
   position: relative;
 }
 
-/* use this for only one picture */
-/* 
+/* USE THIS FOR ONLY ONE PICTURE */
+
 .home-picture::before {
-  background-image: url("../images/front page/lash-bg-01.jpg");
+  background-image: url("../images/front page/lash-bg-02.jpg");
   background-color: var(--color_dark);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  filter: brightness(0.8);
+  /* filter: brightness(0.9); */
   content: "";
   position: absolute;
   top: 0;
@@ -302,10 +302,9 @@ nav ul li a {
   height: 100%;
   border-radius: inherit;
 }
-*/
 
-/* use this for pattern background */
-.home-picture::before {
+/* USE THIS FOR PATTERN BACKGROUND */
+/* .home-picture::before {
   content: "";
   position: absolute;
   top: 0;
@@ -316,17 +315,19 @@ nav ul li a {
   background-image: url("../images/graphics/lash_2.png");
   background-size: 200px;
   background-color: #ffffff2e;
-}
+} */
 
 .home h2 {
-  color: rgba(215, 215, 215);
+  color: var(--color_dark);
   text-transform: uppercase;
   z-index: 1;
   font-family: "Philosopher", sans-serif;
   font-size: 7em;
   text-align: center;
   text-shadow: 8px 8px 4px var(--color_shadow);
-  margin: auto 60px;
+  position: absolute;
+  bottom: 2rem;
+  right: 3rem;
 }
 
 /* ******************************* PORTFOLIO ******************************* */
@@ -666,6 +667,7 @@ footer p {
   line-height: 2rem;
 }
 
+/* MOBILE DESIGN */
 @media screen and (max-width: 1200px) {
   hr {
     border-width: 2px;
@@ -765,15 +767,13 @@ footer p {
   }
 
   .home-picture::before {
-    /* background-image: none;
-    filter: none; */
-    background-size: 110px;
   }
 
   .home h2 {
-    font-size: 3em;
-    margin: 0;
+    font-size: 2.4em;
     text-shadow: 5px 5px 3px var(--color_shadow);
+    bottom: 0.4rem;
+    right: 1rem;
   }
 
   /* ******************************* PORTFOLIO ******************************* */
