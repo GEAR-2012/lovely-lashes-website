@@ -438,41 +438,38 @@ nav ul li a {
 }
 
 /* ******************************* PRICE ******************************* */
-/* main container for pricelists */
+
 .price .pricelists {
-  position: relative;
+  display: grid;
+  gap: 3rem;
+  justify-items: center;
 }
 
-.price .pricelists .btn {
-  position: absolute;
-  right: 160px;
-  font-size: 3rem;
-  text-decoration: none;
-  padding: 6px 30px;
-  border-radius: 10px;
-  border: 1px solid var(--color_border);
-  transition: all 0.1s;
+.price .container-a,
+.price .container-b {
+  padding: 26px 50px 36px;
+  border: 2px solid var(--color_border);
+  border-radius: 40px;
+  background-color: var(--color_light);
+  display: grid;
+  grid-template-columns: auto auto;
+  justify-content: center;
+  column-gap: 18px;
 }
 
-.price .pricelists .btn:hover {
-  transform: translateY(-2px);
-  border: 1px solid rgba(0, 0, 0, 0.2);
-  background-color: rgba(255, 255, 255, 0.1);
-  box-shadow: 0 6px 8px 3px var(--color_shadow);
+.price .container-a {
+  row-gap: 8px;
 }
 
-.price .pricelists .btn:active {
-  transform: translateY(0px);
-  background-color: rgba(0, 0, 0, 0.02);
-  box-shadow: 0 3px 4px 3px rgba(0, 0, 0, 0.45) inset;
+.price .container-b {
+  row-gap: 22px;
 }
 
-.price .pricelists .btn:first-child {
-  top: 0;
-}
-
-.price .pricelists .btn:last-child {
-  bottom: 0;
+.price .sub-container {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  column-gap: 22px;
+  row-gap: 10px;
 }
 
 /* list title */
@@ -518,36 +515,6 @@ nav ul li a {
   font-family: "Advent Pro", sans-serif;
   font-size: 2em;
   font-weight: normal;
-}
-
-.price .container-a,
-.price .container-b {
-  width: 50%;
-  margin: 30px auto 0;
-  padding: 26px 50px 36px;
-  border: 2px solid var(--color_border);
-  border-radius: 40px;
-  background-color: var(--color_light);
-  display: grid;
-  grid-template-columns: 1fr auto;
-  grid-column-gap: 18px;
-}
-
-.price .container-a {
-  min-width: 600px;
-  grid-row-gap: 8px;
-}
-
-.price .container-b {
-  min-width: 600px;
-  grid-row-gap: 22px;
-}
-
-.price .sub-container {
-  display: grid;
-  grid-template-columns: 1fr auto;
-  grid-column-gap: 22px;
-  grid-row-gap: 10px;
 }
 
 /* ******************************* ABOUT ******************************* */
@@ -766,9 +733,6 @@ footer p {
     filter: brightness(1);
   }
 
-  .home-picture::before {
-  }
-
   .home h2 {
     font-size: 2.4em;
     text-shadow: 5px 5px 3px var(--color_shadow);
@@ -839,8 +803,28 @@ footer p {
 
   /* ******************************* PRICE ******************************* */
 
-  .price .pricelists .btn {
-    display: none;
+  .price .pricelists {
+    gap: 2rem;
+  }
+
+  .price .container-a,
+  .price .container-b {
+    padding: 20px 20px;
+    column-gap: 10px;
+    border-radius: 20px;
+  }
+
+  .price .container-a {
+    row-gap: 10px;
+  }
+
+  .price .container-b {
+    row-gap: 10px;
+  }
+
+  .price .sub-container {
+    column-gap: 10px;
+    row-gap: 2px;
   }
 
   /* list title */
@@ -866,28 +850,6 @@ footer p {
   .price .container-a h3,
   .price .container-b h3 {
     font-size: 1.2em;
-  }
-
-  .price .container-a,
-  .price .container-b {
-    width: auto;
-    min-width: initial;
-    margin-top: 30px;
-    padding: 20px 20px;
-    grid-column-gap: 10px;
-  }
-
-  .price .container-a {
-    grid-row-gap: 10px;
-  }
-
-  .price .container-b {
-    grid-row-gap: 10px;
-  }
-
-  .price .sub-container {
-    grid-column-gap: 10px;
-    grid-row-gap: 2px;
   }
 
   /* ******************************* ABOUT ******************************* */

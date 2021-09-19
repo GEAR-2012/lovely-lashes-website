@@ -75,6 +75,7 @@
             <div>
               <ul>
                 <li><a href="#home">home</a></li>
+                <li><a href="#the-salon">our salon</a></li>
                 <li><a href="#portfolio">porfolio</a></li>
                 <li><a href="#services">our services</a></li>
                 <li><a href="#price">price list</a></li>
@@ -114,24 +115,53 @@
       </section>
       <hr />
 
-      <section class="portfolio">
-        <a id="portfolio"></a>
-        <h2 class="section-title">My Portfolio</h2>
+      <section class="the-salon">
+        <a id="the-salon"></a>
+        <h2 class="section-title">Our Salon</h2>
 
+        <!-- OUR SALON -->
         <!-- GALLERY-SLIDESHOW -->
         <!-- This is the main container for the gallery with slideshow -->
-        <div class="gallery-with-slideshow">
+        <!-- 'data-name' attr should be same as the '***' part in this: 'images/gallery_***' -->
+        <div data-name="salon" class="gallery-with-slideshow">
           <!-- Full Screen Slideshow Initialy hidden -->
-          <div id="fullscreen-slideshow" class="fullscreen-slideshow">
-            <i id="left-arrow" class="far fa-arrow-alt-circle-left"></i>
-            <i id="right-arrow" class="far fa-arrow-alt-circle-right"></i>
-            <div id="image" class="image">
+          <div class="fullscreen-slideshow">
+            <i class="far fa-arrow-alt-circle-left"></i>
+            <i class="far fa-arrow-alt-circle-right"></i>
+            <div class="image">
               <!-- provided by javascript -->
             </div>
           </div>
 
           <!-- Gallery -->
-          <div id="gallery" class="gallery">
+          <div class="gallery">
+            <!-- deployed by javascript -->
+          </div>
+        </div>
+        <!-- GALLERY-SLIDESHOW END -->
+      </section>
+      <hr />
+
+      <section class="portfolio">
+        <a id="portfolio"></a>
+        <h2 class="section-title">My Portfolio</h2>
+
+        <!-- PORTFOLIO -->
+        <!-- GALLERY-SLIDESHOW -->
+        <!-- This is the main container for the gallery with slideshow -->
+        <!-- 'data-name' attr should be same as the '***' part in this: 'images/gallery_***' -->
+        <div data-name="portfolio" class="gallery-with-slideshow">
+          <!-- Full Screen Slideshow Initialy hidden -->
+          <div class="fullscreen-slideshow">
+            <i class="far fa-arrow-alt-circle-left"></i>
+            <i class="far fa-arrow-alt-circle-right"></i>
+            <div class="image">
+              <!-- provided by javascript -->
+            </div>
+          </div>
+
+          <!-- Gallery -->
+          <div class="gallery">
             <!-- deployed by javascript -->
           </div>
         </div>
@@ -256,17 +286,16 @@
         <a id="price"></a>
         <h2 class="section-title">Prices</h2>
         <article class="pricelists">
-          <a class="btn" href="printprice.html" target="_blank">🖨</a>
-
+          <!-- extensions -->
           <div class="container-a">
             <h2 class="main-title">Eyelash Extensions:</h2>
+            <!-- JavaScript content here -->
           </div>
-
+          <!-- infills -->
           <div class="container-b">
             <h2 class="main-title">Eyelash Infills:</h2>
+            <!-- JavaScript content here -->
           </div>
-
-          <a class="btn" href="printprice.html" target="_blank">🖨</a>
         </article>
       </section>
       <hr />
@@ -316,6 +345,11 @@
           <i class="fab fa-instagram contact__cont--title"></i>
           <a class="contact__cont--info" href="https://www.facebook.com/EyelashExtensionsbyElvira/" target="_blank"
             >Lovely Lashes on Insta</a
+          >
+          <!-- email -->
+          <i class="fas fa-at contact__cont--title"></i>
+          <a class="contact__cont--info" href="mailto:lovely.lashes.aberdeen@gmail.com"
+            >lovely.lashes.aberdeen@gmail.com</a
           >
         </div>
       </section>

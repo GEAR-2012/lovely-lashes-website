@@ -1,29 +1,28 @@
-// This script unhide the slideshow when a picture clicked and arrange the slideshow to work
+// This script unhide all slideshow in all gallery when a picture clicked and arrange the slideshow to work
 
-const slideshowBackground = document.querySelector("#fullscreen-slideshow");
-const image = document.querySelector("#image");
-const leftArrow = document.querySelector("#left-arrow");
-const rightArrow = document.querySelector("#right-arrow");
+const slideshowContainers = document.querySelectorAll(".fullscreen-slideshow");
+let galleryName;
+let image;
+let leftArrow;
+let rightArrow;
 let imageIndex;
 
-// Initially hide the slideshow until a gallery picture clicked
-slideshowBackground.classList.add("hide");
+// Initially hide all slideshow in all gallery until a gallery picture clicked
+slideshowContainers.forEach((slideshowContainer) => {
+  slideshowContainer.classList.add("hide");
+});
 
-leftArrow.onclick = imagesBackward;
-rightArrow.onclick = imagesForward;
-slideshowBackground.onclick = hideSlideshow;
-
-function imagesBackward() {
+function imagesBackward(e) {
   if (imageIndex === 0) {
-    imageIndex = imageURLArray.length - 1;
+    imageIndex = imageURLArraysObj[galleryName].length - 1;
   } else {
     imageIndex--;
   }
   setImageUrl(imageIndex);
 }
 
-function imagesForward() {
-  if (imageIndex === imageURLArray.length - 1) {
+function imagesForward(e) {
+  if (imageIndex === imageURLArraysObj[galleryName].length - 1) {
     imageIndex = 0;
   } else {
     imageIndex++;
@@ -31,19 +30,27 @@ function imagesForward() {
   setImageUrl(imageIndex);
 }
 
-function setImageUrl(url) {
-  image.style.backgroundImage = "url(" + imageURLArray[url] + ")";
+function hideSlideshow(e) {
+  const elementTagName = e.target.tagName;
+  if (elementTagName !== "I") {
+    slideshowContainer.classList.add("hide");
+  }
 }
 
-function hideSlideshow(e) {
-  const elementId = e.target.id;
-  if (elementId !== "left-arrow" && elementId !== "right-arrow") {
-    slideshowBackground.classList.add("hide");
-  }
+function setImageUrl(url) {
+  image.style.backgroundImage = "url(" + imageURLArraysObj[galleryName][url] + ")";
 }
 
 function openSlideshow(that) {
   imageIndex = parseInt(that.id, 10);
+  slideshowContainer = that.parentElement.parentElement.firstElementChild;
+  slideshowContainer.onclick = hideSlideshow;
+  leftArrow = slideshowContainer.children[0];
+  leftArrow.onclick = imagesBackward;
+  rightArrow = slideshowContainer.children[1];
+  rightArrow.onclick = imagesForward;
+  image = slideshowContainer.children[2];
+  galleryName = that.parentElement.parentElement.dataset.name;
   setImageUrl(imageIndex);
-  slideshowBackground.classList.remove("hide");
+  slideshowContainer.classList.remove("hide");
 }
