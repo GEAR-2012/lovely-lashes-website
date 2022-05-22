@@ -4,7 +4,8 @@ const currency = "£";
 
 //import the json file and convert to js object
 //if done passing the 'data' into a function call as an argument
-fetch("../pricelist data/extensions.json")
+// fetch("../pricelist data/extensions.json")
+fetch("./pricelist data/extensions.json")
   .then((resp) => resp.json())
   .then((data) => myJSONtoArray(data));
 
@@ -15,7 +16,8 @@ function myJSONtoArray(obj) {
 }
 
 //same procedure with more difficult JSON
-fetch("../pricelist data/infills.json")
+// fetch("../pricelist data/infills.json")
+fetch("./pricelist data/infills.json")
   .then((resp) => resp.json())
   .then((data) => myJSONtoArray_2(data));
 

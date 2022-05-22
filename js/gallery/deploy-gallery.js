@@ -7,7 +7,8 @@ galleriesWithSlideshow.forEach((galleryWithSlideshow) => {
   const galleryWithSlideshowName = galleryWithSlideshow.dataset.name;
   const galleryCont = galleryWithSlideshow.children[1];
 
-  const jsonUrl = "../../images/gallery_" + galleryWithSlideshowName + "/imageUrlList.json";
+  // const jsonUrl = "../../images/gallery_" + galleryWithSlideshowName + "/imageUrlList.json";
+  const jsonUrl = "./images/gallery_" + galleryWithSlideshowName + "/imageUrlList.json";
   const imageURLArray = [];
 
   // Fetch image url-s from json file and push into an array

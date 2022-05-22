@@ -1,42 +1,38 @@
 {
   "tr1": {
-    "name": "Classic 1D Full Set (Silk or Mink)",
+    "name": "Cashmere 1D Taster set (Classic)",
     "price": 45
   },
   "tr2": {
-    "name": "Classic 1D Full Set (Cashmere)",
-    "price": 49
+    "name": "Cashmere 1D Full set (Classic)",
+    "price": 53
   },
   "tr3": {
     "name": "Hybrid Lashes (1-3D Mix)",
-    "price": 53
+    "price": 57
   },
   "tr4": {
     "name": "2-3D Volume Lashes",
-    "price": 55
-  },
-  "tr5": {
-    "name": "3-4D Volume Lashes \"Russian\"",
     "price": 60
   },
-  "tr6": {
-    "name": "4-6D Mega Volume Lashes",
+  "tr5": {
+    "name": "3-4D Volume Lashes (Russian)",
     "price": 65
+  },
+  "tr6": {
+    "name": "5-10D Mega Volume Lashes",
+    "price": 69
   },
   "tr7": {
     "name": "Whispy Volume Lashes (3-6D)",
-    "price": 60
+    "price": 65
   },
   "tr8": {
     "name": "Bottom Eyelash Extension",
-    "price": 20
+    "price": 25
   },
   "tr9": {
-    "name": "Remove",
-    "price": "10/15"
-  },
-  "tr10": {
-    "name": "Lash Tint",
-    "price": 10
+    "name": "Lash Removal",
+    "price": "12-17"
   }
 }
